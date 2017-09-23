@@ -12,9 +12,9 @@
     待更新
 ### 第一个agent
     0. [仓库](https://github.com/GuoZoneDUT/sc2/tree/master/build_first_agent)
-	1.如何写agent
-    2. [最最最简单的小脚本：移动](https://github.com/GuoZoneDUT/sc2/blob/master/build_first_agent/simple.py)　　
-	3. [最最简单的小脚本：兵营建造](https://github.com/GuoZoneDUT/sc2/blob/master/build_first_agent/test_agent.py)　　
+	1. 如何写agent
+    2. [最最最简单的小脚本：移动](https://github.com/GuoZoneDUT/sc2/blob/master/build_first_agent/simple.py)  
+	3. [最最简单的小脚本：兵营建造](https://github.com/GuoZoneDUT/sc2/blob/master/build_first_agent/test_agent.py)  
 ### 写个简单战术
 coding....
 ## 参考
