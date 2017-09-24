@@ -9,9 +9,9 @@
 ### pysc2的构成
     待更新
 ### 资料
-   [单位定义](https://github.com/GuoZoneDUT/sc2/blob/master/data/define_unit.txt)
-   [动作函数定义](https://github.com/GuoZoneDUT/sc2/blob/master/data/define_functions.txt)
-   [单位中英文对照](https://github.com/GuoZoneDUT/sc2/blob/master/data/translate.txt)
+   1. [单位定义](https://github.com/GuoZoneDUT/sc2/blob/master/data/define_unit.txt)
+   2. [动作函数定义](https://github.com/GuoZoneDUT/sc2/blob/master/data/define_functions.txt)
+   3. [单位中英文对照](https://github.com/GuoZoneDUT/sc2/blob/master/data/translate.txt)
 ### 第一个agent
    0. [仓库](https://github.com/GuoZoneDUT/sc2/tree/master/build_first_agent)
    1. 如何写agent
