@@ -1,0 +1,260 @@
+Armory 兵工厂
+
+Auto Turret 自动炮台
+
+Banshee 女妖轰炸机
+
+Barracks 兵营
+
+Battlecruiser 战略巡洋舰 大舰 大和舰
+
+Bunker 碉堡 地堡
+
+Command Center 指挥中心 基地
+
+Engineering Bay 电机工程所
+
+Factory 军工厂
+
+Fusion Core 核聚变核心
+
+Ghost 幽灵特务 鬼子 核弹兵
+
+Ghost Academy 幽灵特务学院
+
+Hellion 恶狼
+
+MULE 矿骡
+
+Marauder 掠夺者
+
+Marine 陆战队 机枪兵
+
+Medivac 医疗艇
+
+Missile Turret 飞弹炮台 防空炮
+
+Nuclear Reactor 反应炉 双建
+
+Nuke 核弹
+
+Orbital Command 星轨指挥总部
+
+Planetary Fortress 行星要塞
+
+Point Defense Drone 定点防御无人机
+
+Refinery 瓦斯精炼厂
+
+Raven 渡鸦 反隐形球?貌似不是球了
+
+Reaper 死神 收割者
+
+SensorTower 感应塔
+
+SCV 太空工程车 人族农民
+
+SiegeTank 攻城坦克 变形坦克
+
+Starport 星际港 飞机场
+
+Supply Depot 补给站 房子
+
+TechLab 科技实验室 科技附属
+
+Thor 雷神
+
+Viking 维京战机 变形灰机
+
+神族：
+
+Archon 执政官 电魔 电球 白球
+
+Assimilator 瓦斯处理厂
+
+Carrier 航空母舰
+
+Colossus 巨像
+
+Cybernetics Core 机械控制核心
+
+Dark Shrine 黑暗圣殿
+
+Dark Templar 黑暗圣堂武士 隐刀
+
+Disruptor 哨兵 烧饼
+
+FleetBeacon 舰队导航台
+
+ForceField 力场
+
+Forge 冶炼厂
+
+Gateway 传送门 神族兵营
+
+HighTemplar 高阶圣堂武士 闪电兵
+
+Immortal 不朽者 白龙骑
+
+Interceptor 拦截机 航母小灰机
+
+Mothership 圣母舰 妈妈船
+
+Nexus 星核 主基地
+
+Observer 观察者 叮当
+
+Phoenix 凤凰战机
+
+PhotonCannon 光子加农炮 炮台
+
+Probe 探测机 神族农民
+
+Pylon 水晶塔
+
+RoboticsBay 机械研究所
+
+RoboticsFacility 机械制造厂
+
+Stalker 追猎者 黑龙骑
+
+Stargate 星际之门 飞机场
+
+TemplarArchive 圣堂文库
+
+TwilightCouncil 暮光议会
+
+VoidRay 虚空舰 曲光船
+
+WarpGate 空间之门
+
+WarpPrism 传输棱镜 运输机
+
+Zealot 狂战士 叉叉兵
+
+虫族：
+
+Baneling 毒爆虫 爆蛉 自爆虫
+
+Baneling Egg 毒爆虫虫茧
+
+Baneling Nest 毒爆虫巢
+
+Brood Lord 寄生王虫 大龙 天蜘蛛 河蟹 巢主
+
+Broodling 寄生虫 巢蛉
+
+Changeling 变形虫 变蛉
+
+Corruptor 腐化
+
+飞虫 泡泡龙
+
+Creep Tumor 虫苔瘤 **
+
+Drone 工虫 工蜂 虫族农民
+
+Egg 虫族虫茧
+
+EvolutionChamber 进化室
+
+Extractor 瓦斯萃取巢
+
+Greater Spire 巨型螺旋塔 大飞龙塔
+
+Hatchery 孵化所 一本
+
+Hive 虫巢 三本
+
+Hydralisk 刺蛇
+
+HydraliskDen 刺蛇兽穴
+
+InfestationPit 感染巢
+
+InfestedTerransEgg 受感染的虫卵
+
+Infestor 感染虫 肉虫
+
+Infestor Terran 受感染的人类
+
+Lair 虫穴 二本
+
+Larva 幼虫
+
+Mutalisk 飞螳 飞龙
+
+MutaliskCocoon 寄生王虫虫茧
+
+NydusCanal 地下蠕虫 坑道虫 菊花虫
+
+NydusNetwork 虫殖地网 同上
+
+Overlord 王虫 领主
+
+OverlordCocoon 监察王虫虫茧
+
+Overseer 监察王虫 千眼邪教神
+
+Queen 后虫
+
+Roach 蟑螂 小强
+
+RoachWarren 蟑螂繁殖场
+
+SpawningPool 孵化池 血池
+
+SpineCrawler 脊刺爬行虫 地堡
+
+Spire 螺旋塔 飞龙塔
+
+SporeCrawler 孢子爬行虫 防空炮
+
+Ultralisk 雷兽 大牛 猛犸
+
+UltraliskCavern 雷兽洞穴
+
+Zergling 异化虫 虫蛉 小狗
+
+通用及地表装饰物:
+
+Critter 小生物
+
+Cow 牛
+
+Chazbat 叉炙蝙蝠
+
+Carrion Bird 腐食鷲
+
+Dog 狗
+
+Glow Lizard 特里黎克
+
+Iguana 鬣蜥
+
+Lyote 里欧特
+
+Mengsk Statue 蒙斯克雕像
+
+Mengsk Statue Alone 单独的蒙斯克雕像
+
+Observatory 萨尔纳加塔
+
+Sheep 羊
+
+Thorn Lizard 刺脊蜥
+
+Traffic Signal 交通信号灯
+
+Wolf Statue 狼形雕像
+
+矿石：
+
+High Yield Mineral Field 高产量晶矿场
+
+Mineral Field 晶矿场
+
+Rich Vespene Geyser 高产量高能瓦斯涌源 气矿
+
+Vespene Geyser 高能瓦斯涌源 富气矿
+
