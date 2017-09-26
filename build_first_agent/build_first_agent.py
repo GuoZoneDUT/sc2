@@ -25,23 +25,5 @@ class FirstAgent(base_agent.BaseAgent):
 
     def transformLocation(self,x,x_distance,y,y_distance):
         return[x - x_distance,y - y_distance]
-    def step(self,obs):
-        super(FirstAgent,self).step(obs)
 
-        unit_type = obs.observation['screen'][_UNIT_TYPE]
-        
-        unit_y,unit_x = (unit_type == _ZERG_DRONE).nonzero()
-
-        target = [unit_x[0],unit_y[0]]
-        
-        actions.FunctionCall(_SELECT_POINT,[_SCREEN,target])
-        if _BUILD_SPAWNINGPOOL_SCREEN in obs.observation['available_actions']:
-            unit_type = obs.observation['screen'][_UNIT_TYPE]
-
-            unit_y,unit_x = (unit_type == _ZERG_HATCHERY).nonzero()
-
-            target = self.transformLocation(int(unit_x.mean()),10,int(unit_y.mean()),0)
-            actions.FunctionCall(_Build_SpawningPool_screen,[_SCREEN,target])
-
-        return actions.FunctionCall(_NOOP,[])
         

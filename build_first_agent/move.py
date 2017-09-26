@@ -15,11 +15,11 @@ _TERRAN_SCV = 45
 _SCREEN = [0]
 _MINIMAP= [1]
 #定义自己的agent类
-class test_agent(base_agent.BaseAgent):
+class move_agent(base_agent.BaseAgent):
     scv_selected = False
     #定义动作
     def step(self, obs):
-        super(test_agent, self).step(obs)
+        super(move_agent, self).step(obs)
         #判断scv是否选择
         if not self.scv_selected:
             unit_type = obs.observation['screen'][_UNIT_TYPE]
