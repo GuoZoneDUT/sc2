@@ -2,6 +2,7 @@ import numpy as np
 
 from pysc2.lib import actions as sc2_action
 from pysc2.env import environment
+from pysc2.env import sc2_env
 from pysc2.lib import features
 from pysc2.lib import actions
 
@@ -26,3 +27,5 @@ class mineral(object):
             return actions.FunctionCall(_SELECT_ARMY,[_SELECT_ALL])
         a =np.random.randint(0,63,[64,64])
         return actions.FunctionCall(_MOVE_SCREEN,['screen',a])
+
+sc2_env.SC2Env(map_name="CollectMineralShards")
