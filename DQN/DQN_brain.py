@@ -154,14 +154,14 @@ class Mineral(object):
                        self.s : batch_memory[:,:self.n_features]
             }
         )
-        print(q_next.shape,q_eval.shape)
         q_target = q_eval.copy()
         batch_index = np.arange(self.batch_size,dtype= np.int32)
         eval_act_index = batch_memory[:,self.n_features].astype(int)
         reward = batch_memory[:,self.n_features+1]
 
         q_target[batch_index,eval_act_index] = reward + self.gamma*np.max(q_next,axis=1)
-        self.sess.run(self.train_step)
+        self.sess.run(self.train_step,feed_dict={self.s:batch_memory[:,:self.n_features],
+                                                 self.q_target:q_target})
         self.learn_step_counter +=1
 
     def saver(self):

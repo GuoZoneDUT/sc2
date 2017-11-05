@@ -27,14 +27,14 @@ LEARNING_RATE = 0.1
 REWARN_DECAY = 0.99
 E_GREED = 0.9
 MEMARY_SIZE = 100
-REPLACE_TARGET_ITER = 300
+REPLACE_TARGET_ITER = 100
 BATCH_SIZE = 32
 
 EPSIODES = 100
 
 FLAGS = flags.FLAGS
 FLAGS(sys.argv)
-with sc2_env.SC2Env(map_name="CollectMineralShards",visualize=True,step_mul=1) as env:
+with sc2_env.SC2Env(map_name="CollectMineralShards",visualize=True,step_mul=8) as env:
     RL = Mineral(n_actions=4,n_features=64*64,
                  learning_rate=LEARNING_RATE,
                  reward_decay=REWARN_DECAY,
@@ -43,6 +43,7 @@ with sc2_env.SC2Env(map_name="CollectMineralShards",visualize=True,step_mul=1) a
                  batch_size=BATCH_SIZE,
                  replace_target_iter=REPLACE_TARGET_ITER,
                  output_graph=True)
+    step_global =0
 
     for i in range(EPSIODES):
         env.reset()
@@ -57,18 +58,20 @@ with sc2_env.SC2Env(map_name="CollectMineralShards",visualize=True,step_mul=1) a
         while True:
             action = RL.choose_action(state)
             target = move(target,action)
-            #a = np.random.randint(0,63,[2])
             obs = env.step(actions=[actions.FunctionCall(_MOVE_SCREEN,[_NOT_QUEUED,target])])
             state_ = np.array(obs[0].observation["screen"][_PLAYER_RELATIVE])
             state_ = np.reshape(state_,[64*64])
-            reward = obs[0].reward
+            reward += obs[0].reward
+            if step %50==0:
+                print(reward)
             done = obs[0].step_type == environment.StepType.LAST
             RL.store_transition(state,action,reward,state_)
-            if (step>200) and (step%5==0):
+            if (step_global>200) and (step_global%2==0):
                 RL.learn()
             if done:
                 break
             state = state_
             step+=1
+            step_global+=1
 
 
