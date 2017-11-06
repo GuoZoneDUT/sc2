@@ -31,7 +31,7 @@ REPLACE_TARGET_ITER = 100
 BATCH_SIZE = 32
 
 EPSIODES = 10000
-
+#有错误无法收敛
 FLAGS = flags.FLAGS
 FLAGS(sys.argv)
 with sc2_env.SC2Env(map_name="CollectMineralShards",visualize=False) as env:
@@ -54,7 +54,6 @@ with sc2_env.SC2Env(map_name="CollectMineralShards",visualize=False) as env:
         player_center = [int(player_x.mean()), int(player_y.mean())]
         target = player_center
         reward = 0
-        reward_total = 0
         state = np.reshape(state,[64*64])
         while True:
             action = RL.choose_action(state)
@@ -62,8 +61,7 @@ with sc2_env.SC2Env(map_name="CollectMineralShards",visualize=False) as env:
             obs = env.step(actions=[actions.FunctionCall(_MOVE_SCREEN,[_NOT_QUEUED,target])])
             state_ = np.array(obs[0].observation["screen"][_PLAYER_RELATIVE])
             state_ = np.reshape(state_,[64*64])
-            reward = obs[0].reward
-            reward_total += obs[0].reward
+            reward += obs[0].reward
             if step %50==0:
                 print(reward)
             done = obs[0].step_type == environment.StepType.LAST
@@ -71,7 +69,6 @@ with sc2_env.SC2Env(map_name="CollectMineralShards",visualize=False) as env:
             if (step_global>200) and (step_global%5==0):
                 RL.learn()
             if done:
-                print(reward_total)
                 break
             state = state_
             step+=1
