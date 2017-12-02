@@ -169,11 +169,3 @@ class Mineral(object):
         if self.learn_step_counter % 100==0:
             saver.restore(self.sess,"./mynet/save_net.ckpt")
             print("saved!")
-
-
-
-
-
-
-
-

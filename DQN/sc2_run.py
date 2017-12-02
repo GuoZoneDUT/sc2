@@ -34,7 +34,7 @@ EPSIODES = 10000
 #有错误无法收敛
 FLAGS = flags.FLAGS
 FLAGS(sys.argv)
-with sc2_env.SC2Env(map_name="CollectMineralShards",visualize=False) as env:
+with sc2_env.SC2Env(map_name="CollectMineralShards",visualize=True) as env:
     RL = Mineral(n_actions=4,n_features=64*64,
                  learning_rate=LEARNING_RATE,
                  reward_decay=REWARN_DECAY,
@@ -56,20 +56,24 @@ with sc2_env.SC2Env(map_name="CollectMineralShards",visualize=False) as env:
         reward = 0
         state = np.reshape(state,[64*64])
         while True:
-            action = RL.choose_action(state)
-            target = move(target,action)
-            obs = env.step(actions=[actions.FunctionCall(_MOVE_SCREEN,[_NOT_QUEUED,target])])
-            state_ = np.array(obs[0].observation["screen"][_PLAYER_RELATIVE])
-            state_ = np.reshape(state_,[64*64])
-            reward += obs[0].reward
-            if step %50==0:
-                print(reward)
+            if step%3==0:
+                action = RL.choose_action(state)
+                target = move(target,action,4)
+                obs = env.step(actions=[actions.FunctionCall(_MOVE_SCREEN,[_NOT_QUEUED,target])])
+                state_ = np.array(obs[0].observation["screen"][_PLAYER_RELATIVE])
+                state_ = np.reshape(state_,[64*64])
+                reward += obs[0].reward
+                if step %50==0:
+                    print(reward)
+                RL.store_transition(state,action,reward,state_)
+                if (step_global>200) and (step_global%4==0):
+                    RL.learn()
+                state = state_
+            else:
+                obs=env.step(actions=[actions.FunctionCall(_NO_OP,[])])
             done = obs[0].step_type == environment.StepType.LAST
-            RL.store_transition(state,action,reward,state_)
-            if (step_global>200) and (step_global%5==0):
-                RL.learn()
             if done:
                 break
-            state = state_
+
             step+=1
             step_global+=1
