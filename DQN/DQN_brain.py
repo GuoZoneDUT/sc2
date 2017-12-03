@@ -73,7 +73,7 @@ class Mineral(object):
                 W = tf.get_variable('output_w',[128,4],initializer=w_initializer,collections=c_names)
                 b = tf.get_variable('output_b',[1,4],initializer = b_initializer,collections=c_names)
                 self.q_eval = tf.matmul(fc_1,W)+b
-
+                
         with tf.variable_scope("loss"):
             loss = tf.reduce_mean(tf.squared_difference(self.q_target,self.q_eval))
 
